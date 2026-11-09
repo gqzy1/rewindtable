@@ -1,0 +1,25 @@
+{
+  "owner": "0x430472a4ece92760b5468ec8fc46f7494b78fe55",
+  "phase": "DRAFT",
+  "revision": 0,
+  "spec": {
+    "actions": [
+      {
+        "forward": "idle becomes held; otherwise disabled.",
+        "name": "hold",
+        "undo": "held becomes idle; otherwise disabled."
+      },
+      {
+        "forward": "held becomes ready; otherwise disabled.",
+        "name": "prepare",
+        "undo": "ready becomes held; otherwise disabled."
+      }
+    ],
+    "modes": [
+      "idle",
+      "held",
+      "ready"
+    ]
+  },
+  "tag": "good"
+}

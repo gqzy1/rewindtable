@@ -1,0 +1,63 @@
+{
+  "certificate": "1085fc61a036e11c08501b898116004e2c429b3a32b0b9eb2fa2654e5ace14d8",
+  "maps": {
+    "tables": [
+      {
+        "forward": [
+          2,
+          2,
+          -1
+        ],
+        "undo": [
+          -1,
+          -1,
+          0
+        ]
+      }
+    ]
+  },
+  "owner": "0x430472a4ece92760b5468ec8fc46f7494b78fe55",
+  "phase": "BROKEN",
+  "report": {
+    "counterexamples": [
+      {
+        "action": 0,
+        "after": 2,
+        "before": 1,
+        "restored": 0
+      }
+    ],
+    "result": "BROKEN",
+    "roundtrips": [
+      {
+        "action": 0,
+        "after": 2,
+        "before": 0,
+        "restored": 0
+      },
+      {
+        "action": 0,
+        "after": 2,
+        "before": 1,
+        "restored": 0
+      }
+    ],
+    "unknown": []
+  },
+  "revision": 1,
+  "spec": {
+    "actions": [
+      {
+        "forward": "Modes are indexed from zero: idle is 0, held is 1, ready is 2. From idle (0), output ready (2). From held (1), output ready (2). From ready (2), this action is disabled.",
+        "name": "erase",
+        "undo": "Modes are indexed from zero: idle is 0, held is 1, ready is 2. For current ready (2), output idle (0). For current idle (0) and held (1), compensation is disabled. There are no other inputs or effects."
+      }
+    ],
+    "modes": [
+      "idle",
+      "held",
+      "ready"
+    ]
+  },
+  "tag": "lossy-explicit"
+}

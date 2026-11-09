@@ -1,0 +1,134 @@
+{
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "address": "0xaF85484be03e8119542A616804eE5886491d1ba2",
+  "owner": "0x430472A4EcE92760B5468EC8FC46F7494B78FE55",
+  "deploy_tx": "0xafdec553e1321a5e91db47553341c2e7b08d67749b33bd95df17071da9cc5a12",
+  "source_sha256": "1a125d24f2cb9d3d6310bab39ae1f458d61c2e0fd0563baf973538850eedc5dc",
+  "source": "src/rewindtable.py",
+  "view": "book",
+  "transactions": [
+    {
+      "label": "deploy",
+      "hash": "0xafdec553e1321a5e91db47553341c2e7b08d67749b33bd95df17071da9cc5a12",
+      "method": "deploy",
+      "args": []
+    },
+    {
+      "label": "register-good",
+      "hash": "0x86ebe2d8e512572511dcc2d7aedb38989d53c677e8557b71ef0dc0459dffb988",
+      "method": "register",
+      "args": [
+        "good",
+        "{\"modes\":[\"idle\",\"held\",\"ready\"],\"actions\":[{\"name\":\"hold\",\"forward\":\"idle becomes held; otherwise disabled.\",\"undo\":\"held becomes idle; otherwise disabled.\"},{\"name\":\"prepare\",\"forward\":\"held becomes ready; otherwise disabled.\",\"undo\":\"ready becomes held; otherwise disabled.\"}]}"
+      ]
+    },
+    {
+      "label": "verify-good",
+      "hash": "0x188522b0c8a62523e44239a4b7950ae893c8c38480f0b7e8921f61fb1ca76bfa",
+      "method": "verify",
+      "args": [
+        "good",
+        0
+      ]
+    },
+    {
+      "label": "start",
+      "hash": "0x852761bf2bef38f73234bc9e1699076a078befe635fe3a7d6b6b9621f9201582",
+      "method": "start",
+      "args": [
+        "good",
+        1,
+        "c18dc655e644dcd4d91eb2ca95a301404a9d98d05929921adcd58e17dbb1cc22",
+        0
+      ]
+    },
+    {
+      "label": "step-hold",
+      "hash": "0x7dab7984197e79f39a09b327fb73f94d44a72b52f1b2c7f892a9002f25abbce8",
+      "method": "step",
+      "args": [
+        "good",
+        2,
+        0
+      ]
+    },
+    {
+      "label": "step-prepare",
+      "hash": "0xb0a134e477d631858c23af329ee83565136a917ebc9d22ba157f223df066fa54",
+      "method": "step",
+      "args": [
+        "good",
+        3,
+        1
+      ]
+    },
+    {
+      "label": "undo-prepare",
+      "hash": "0x8dfbe184bbf07492c36978436225f041813d63159e5b7fbd37f3fcfdf5e13d95",
+      "method": "rewind",
+      "args": [
+        "good",
+        4
+      ]
+    },
+    {
+      "label": "undo-hold",
+      "hash": "0x8e953e6e275b845c040453e993afa527e4c96aa218f7f1b6dfec611d99220b9c",
+      "method": "rewind",
+      "args": [
+        "good",
+        5
+      ]
+    },
+    {
+      "label": "register-broken",
+      "hash": "0xac08df05b3cf628a15e59fdfdcb20702c65821739aa390a250b42b8f23b3f8fd",
+      "method": "register",
+      "args": [
+        "broken",
+        "{\"modes\":[\"idle\",\"held\",\"ready\"],\"actions\":[{\"name\":\"erase\",\"forward\":\"idle becomes ready. held becomes ready. ready is disabled.\",\"undo\":\"ready becomes idle; otherwise disabled.\"}]}"
+      ]
+    },
+    {
+      "label": "register-explicit",
+      "hash": "0x42429717805b4cb1fe67cc20ea922842d1286e4eb83895f0e4c8faaf3cdddfc6",
+      "method": "register",
+      "args": [
+        "lossy-explicit",
+        "{\"modes\":[\"idle\",\"held\",\"ready\"],\"actions\":[{\"name\":\"erase\",\"forward\":\"Modes are indexed from zero: idle is 0, held is 1, ready is 2. From idle (0), output ready (2). From held (1), output ready (2). From ready (2), this action is disabled.\",\"undo\":\"Modes are indexed from zero: idle is 0, held is 1, ready is 2. For current ready (2), output idle (0). For current idle (0) and held (1), compensation is disabled. There are no other inputs or effects.\"}]}"
+      ]
+    },
+    {
+      "label": "verify-explicit",
+      "hash": "0x2263586d4edfaa038e8e22227da6087da5bbaa2fb9a603978f226a10888d6417",
+      "method": "verify",
+      "args": [
+        "lossy-explicit",
+        0
+      ]
+    }
+  ],
+  "failed_transactions": [
+    {
+      "label": "verify-broken",
+      "hash": "0x30f452b2e4f45cfdfe9884a3faa52015c62a8201959d7be8e191e0ea4a4ff8a6",
+      "status": "FINALIZED",
+      "result": "MAJORITY_DISAGREE"
+    }
+  ],
+  "reads": [
+    {
+      "name": "good",
+      "file": "records/good-book.json"
+    },
+    {
+      "name": "broken",
+      "file": "records/broken-book.json"
+    },
+    {
+      "name": "lossy-explicit",
+      "file": "records/lossy-explicit-book.json"
+    }
+  ]
+}

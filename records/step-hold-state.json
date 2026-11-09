@@ -1,0 +1,90 @@
+{
+  "certificate": "c18dc655e644dcd4d91eb2ca95a301404a9d98d05929921adcd58e17dbb1cc22",
+  "current": 1,
+  "events": [
+    {
+      "action": 0,
+      "after": 1,
+      "before": 0,
+      "direction": "FORWARD"
+    }
+  ],
+  "initial": 0,
+  "maps": {
+    "tables": [
+      {
+        "forward": [
+          1,
+          -1,
+          -1
+        ],
+        "undo": [
+          -1,
+          0,
+          -1
+        ]
+      },
+      {
+        "forward": [
+          -1,
+          2,
+          -1
+        ],
+        "undo": [
+          -1,
+          -1,
+          1
+        ]
+      }
+    ]
+  },
+  "owner": "0x430472a4ece92760b5468ec8fc46f7494b78fe55",
+  "phase": "RUNNING",
+  "report": {
+    "counterexamples": [],
+    "result": "REVERSIBLE",
+    "roundtrips": [
+      {
+        "action": 0,
+        "after": 1,
+        "before": 0,
+        "restored": 0
+      },
+      {
+        "action": 1,
+        "after": 2,
+        "before": 1,
+        "restored": 1
+      }
+    ],
+    "unknown": []
+  },
+  "revision": 3,
+  "spec": {
+    "actions": [
+      {
+        "forward": "idle becomes held; otherwise disabled.",
+        "name": "hold",
+        "undo": "held becomes idle; otherwise disabled."
+      },
+      {
+        "forward": "held becomes ready; otherwise disabled.",
+        "name": "prepare",
+        "undo": "ready becomes held; otherwise disabled."
+      }
+    ],
+    "modes": [
+      "idle",
+      "held",
+      "ready"
+    ]
+  },
+  "stack": [
+    {
+      "action": 0,
+      "after": 1,
+      "before": 0
+    }
+  ],
+  "tag": "good"
+}

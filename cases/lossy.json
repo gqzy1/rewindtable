@@ -1,0 +1,14 @@
+{
+  "modes": [
+    "idle",
+    "held",
+    "ready"
+  ],
+  "actions": [
+    {
+      "name": "erase",
+      "forward": "idle becomes ready. held becomes ready. ready is disabled.",
+      "undo": "ready becomes idle; otherwise disabled."
+    }
+  ]
+}

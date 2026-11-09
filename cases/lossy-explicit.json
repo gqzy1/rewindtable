@@ -1,0 +1,14 @@
+{
+  "modes": [
+    "idle",
+    "held",
+    "ready"
+  ],
+  "actions": [
+    {
+      "name": "erase",
+      "forward": "Modes are indexed from zero: idle is 0, held is 1, ready is 2. From idle (0), output ready (2). From held (1), output ready (2). From ready (2), this action is disabled.",
+      "undo": "Modes are indexed from zero: idle is 0, held is 1, ready is 2. For current ready (2), output idle (0). For current idle (0) and held (1), compensation is disabled. There are no other inputs or effects."
+    }
+  ]
+}

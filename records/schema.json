@@ -1,0 +1,137 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "book": {
+      "params": [
+        [
+          "owner",
+          "string"
+        ],
+        [
+          "tag",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "finish": {
+      "params": [
+        [
+          "tag",
+          "string"
+        ],
+        [
+          "revision",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "register": {
+      "params": [
+        [
+          "tag",
+          "string"
+        ],
+        [
+          "specification_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "rewind": {
+      "params": [
+        [
+          "tag",
+          "string"
+        ],
+        [
+          "revision",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "start": {
+      "params": [
+        [
+          "tag",
+          "string"
+        ],
+        [
+          "revision",
+          "int"
+        ],
+        [
+          "certificate",
+          "string"
+        ],
+        [
+          "mode",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "step": {
+      "params": [
+        [
+          "tag",
+          "string"
+        ],
+        [
+          "revision",
+          "int"
+        ],
+        [
+          "action",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "verify": {
+      "params": [
+        [
+          "tag",
+          "string"
+        ],
+        [
+          "revision",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "version": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    }
+  }
+}
