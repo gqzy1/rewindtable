@@ -32,4 +32,4 @@ Every write is owner-scoped. Revisions prevent stale calls. Tags and specificati
 
 [Finite-function rules](FUNCTIONS.md) · [Verification scope](CHECKS.md) · [Recorded transactions](records/NETWORK.md)
 
-To inspect the existing deployment without signing, run `npm install` followed by `npm run read`. The command verifies source identity, finalized transaction outcomes, call parameters and stored books. It sends no writes.
+Evidence summary: [evidence.json](evidence.json). To inspect the existing deployment without signing, run `npm install` followed by `npm run read`. The command verifies source identity, finalized transaction outcomes, call parameters and stored books. It sends no writes.

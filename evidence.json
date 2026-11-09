@@ -1,0 +1,222 @@
+{
+  "contract": "RewindTable",
+  "network": "Stable Studionet",
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "address": "0xaF85484be03e8119542A616804eE5886491d1ba2",
+  "explorer": "https://explorer-studio.genlayer.com/address/0xaF85484be03e8119542A616804eE5886491d1ba2",
+  "owner": "0x430472A4EcE92760B5468EC8FC46F7494B78FE55",
+  "repository": "https://github.com/gqzy1/rewindtable",
+  "source": "src/rewindtable.py",
+  "source_sha256": "1a125d24f2cb9d3d6310bab39ae1f458d61c2e0fd0563baf973538850eedc5dc",
+  "deploy_tx": "0xafdec553e1321a5e91db47553341c2e7b08d67749b33bd95df17071da9cc5a12",
+  "transactions": [
+    {
+      "label": "deploy",
+      "hash": "0xafdec553e1321a5e91db47553341c2e7b08d67749b33bd95df17071da9cc5a12",
+      "method": "deploy",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "register-good",
+      "hash": "0x86ebe2d8e512572511dcc2d7aedb38989d53c677e8557b71ef0dc0459dffb988",
+      "method": "register",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "verify-good",
+      "hash": "0x188522b0c8a62523e44239a4b7950ae893c8c38480f0b7e8921f61fb1ca76bfa",
+      "method": "verify",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "start",
+      "hash": "0x852761bf2bef38f73234bc9e1699076a078befe635fe3a7d6b6b9621f9201582",
+      "method": "start",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "step-hold",
+      "hash": "0x7dab7984197e79f39a09b327fb73f94d44a72b52f1b2c7f892a9002f25abbce8",
+      "method": "step",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "step-prepare",
+      "hash": "0xb0a134e477d631858c23af329ee83565136a917ebc9d22ba157f223df066fa54",
+      "method": "step",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "undo-prepare",
+      "hash": "0x8dfbe184bbf07492c36978436225f041813d63159e5b7fbd37f3fcfdf5e13d95",
+      "method": "rewind",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "undo-hold",
+      "hash": "0x8e953e6e275b845c040453e993afa527e4c96aa218f7f1b6dfec611d99220b9c",
+      "method": "rewind",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "register-broken",
+      "hash": "0xac08df05b3cf628a15e59fdfdcb20702c65821739aa390a250b42b8f23b3f8fd",
+      "method": "register",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "verify-broken",
+      "hash": "0x30f452b2e4f45cfdfe9884a3faa52015c62a8201959d7be8e191e0ea4a4ff8a6",
+      "method": "verify",
+      "status": "FINALIZED",
+      "result": "MAJORITY_DISAGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 1,
+        "disagree": 3,
+        "idle": 0
+      }
+    },
+    {
+      "label": "register-explicit",
+      "hash": "0x42429717805b4cb1fe67cc20ea922842d1286e4eb83895f0e4c8faaf3cdddfc6",
+      "method": "register",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    },
+    {
+      "label": "verify-explicit",
+      "hash": "0x2263586d4edfaa038e8e22227da6087da5bbaa2fb9a603978f226a10888d6417",
+      "method": "verify",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2
+      }
+    }
+  ],
+  "preserved_failure": {
+    "label": "verify-broken",
+    "hash": "0x30f452b2e4f45cfdfe9884a3faa52015c62a8201959d7be8e191e0ea4a4ff8a6",
+    "status": "FINALIZED",
+    "result": "MAJORITY_DISAGREE",
+    "note": "Leader execution returned SUCCESS, but three validators disagreed, so the book stayed DRAFT at revision 0. Not counted as a success; no Appeal filed and the transaction was not resent."
+  },
+  "books": {
+    "good": {
+      "phase": "RESTORED",
+      "revision": 6,
+      "current": 0,
+      "initial": 0,
+      "stack": [],
+      "certificate": "c18dc655e644dcd4d91eb2ca95a301404a9d98d05929921adcd58e17dbb1cc22"
+    },
+    "broken": {
+      "phase": "DRAFT",
+      "revision": 0
+    },
+    "lossy-explicit": {
+      "phase": "BROKEN",
+      "revision": 1,
+      "forward": [
+        2,
+        2,
+        -1
+      ],
+      "undo": [
+        -1,
+        -1,
+        0
+      ],
+      "counterexamples": [
+        {
+          "action": 0,
+          "after": 2,
+          "before": 1,
+          "restored": 0
+        }
+      ],
+      "certificate": "1085fc61a036e11c08501b898116004e2c429b3a32b0b9eb2fa2654e5ace14d8"
+    }
+  },
+  "local_checks": {
+    "unit_tests": 11,
+    "exhaustive_map_pairs": 729,
+    "result": "PASS",
+    "scope": "scripted host and model fixtures; no network consensus"
+  },
+  "verification": "npm install && npm run read (read-only: verifies deployed source, transactions, votes, call bindings and finalized state, and confirms the preserved failure; sends no writes)"
+}
