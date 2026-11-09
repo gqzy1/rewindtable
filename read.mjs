@@ -24,7 +24,8 @@ for(const entry of config.transactions){
  if(entry.method!=='deploy'){
   const raw=await client.request({method:'eth_getTransactionByHash',params:[entry.hash]});
   const call=Object.fromEntries(abi.calldata.decode(Buffer.from(raw.data.calldata,'base64')));
-  if(call.method!==entry.method||JSON.stringify(call.args)!==JSON.stringify(entry.args))throw Error('Call binding differs');
+  const norm=v=>JSON.stringify(v,(k,x)=>typeof x==='bigint'?Number(x):x);
+  if(call.method!==entry.method||norm(call.args)!==JSON.stringify(entry.args))throw Error('Call binding differs');
  }
  console.log(entry.label,'FINALIZED / MAJORITY_AGREE / SUCCESS',votes.filter(x=>x==='agree').length+' agreeing votes');
 }
